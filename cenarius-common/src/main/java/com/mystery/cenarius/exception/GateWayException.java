@@ -5,6 +5,9 @@ import com.mystery.cenarius.api.IErrorCode;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+/**
+ * @author Mystery
+ */
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class GateWayException extends RuntimeException{
