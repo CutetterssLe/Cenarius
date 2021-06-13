@@ -27,7 +27,7 @@
         <module>cenarius-order</module>
         <module>cenarius-admin</module>
         <module>cenarius-authcenter</module>
-        <module>cenaruis-api</module>
+        <module>cenarius-api</module>
         <module>cenarius-portal</module>
         <module>cenarius-security</module>
         <module>cenarius-coupons</module>
@@ -197,7 +197,7 @@
     <repositories>
         <repository>
             <id>spring</id>
-            <url>https://maven.aliyun.com/repository/spring</url>
+            <url>https://maven.aliyun.com/repository/public</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
