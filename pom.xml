@@ -27,12 +27,13 @@
         <module>cenarius-order</module>
         <module>cenarius-admin</module>
         <module>cenarius-authcenter</module>
-        <module>cenaruis-api</module>
+        <module>cenarius-api</module>
         <module>cenarius-portal</module>
         <module>cenarius-security</module>
         <module>cenarius-coupons</module>
         <module>cenarius-seckill</module>
         <module>cenarius-canal</module>
+        <module>cenarius-mbg</module>
     </modules>
 
     <properties>
@@ -56,9 +57,9 @@
         <aliyun-oss.version>2.5.0</aliyun-oss.version>
         <logstash-logback.version>5.3</logstash-logback.version>
         <admin-starter-server.version>2.1.2</admin-starter-server.version>
-        <tulingmall-common.version>1.0-SNAPSHOT</tulingmall-common.version>
-        <tulingmall-mbg.version>1.0-SNAPSHOT</tulingmall-mbg.version>
-        <tulingmall-security.version>1.0-SNAPSHOT</tulingmall-security.version>
+        <cenarius-common.version>1.0-SNAPSHOT</cenarius-common.version>
+        <cenarius-mbg.version>1.0-SNAPSHOT</cenarius-mbg.version>
+        <cenarius-security.version>1.0-SNAPSHOT</cenarius-security.version>
 
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
         <spring-cloud-alibaba.version>2.1.2.RELEASE</spring-cloud-alibaba.version>
@@ -89,21 +90,21 @@
             </dependency>
             <!--mall通用模块-->
             <dependency>
-                <groupId>com.tuling</groupId>
-                <artifactId>tulingmall-common</artifactId>
-                <version>${tulingmall-common.version}</version>
+                <groupId>com.mystery</groupId>
+                <artifactId>cenarius-common</artifactId>
+                <version>${cenarius-common.version}</version>
             </dependency>
             <!--mall中MBG生成模块-->
             <dependency>
-                <groupId>com.tuling</groupId>
-                <artifactId>tulingmall-mbg</artifactId>
-                <version>${tulingmall-mbg.version}</version>
+                <groupId>com.mystery</groupId>
+                <artifactId>cenarius-mbg</artifactId>
+                <version>${cenarius-mbg.version}</version>
             </dependency>
             <!--mall安全模块-->
             <dependency>
-                <groupId>com.tuling</groupId>
-                <artifactId>tulingmall-security</artifactId>
-                <version>${tulingmall-security.version}</version>
+                <groupId>com.mystery</groupId>
+                <artifactId>cenarius-security</artifactId>
+                <version>${cenarius-security.version}</version>
             </dependency>
             <!--MyBatis分页插件starter-->
             <dependency>
