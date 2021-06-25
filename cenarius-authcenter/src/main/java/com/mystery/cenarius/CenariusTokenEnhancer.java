@@ -11,6 +11,7 @@ import java.util.Map;
 
 /**
  * @author Mystery
+ * jwt自定义增强器(根据自己的业务需求添加非敏感字段)
  */
 public class CenariusTokenEnhancer implements TokenEnhancer {
 
@@ -24,6 +25,8 @@ public class CenariusTokenEnhancer implements TokenEnhancer {
         additionalInfo.put("memberId", principal.getUmsMember().getId());
         additionalInfo.put("nickName", principal.getUmsMember().getNickname());
         additionalInfo.put("integration", principal.getUmsMember().getIntegration());
+
+        retMap.put("additionalInfo", additionalInfo);
 
         ((DefaultOAuth2AccessToken)oAuth2AccessToken).setAdditionalInformation(retMap);
         return oAuth2AccessToken;
