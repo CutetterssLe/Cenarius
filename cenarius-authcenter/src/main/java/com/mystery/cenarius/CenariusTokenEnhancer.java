@@ -1,9 +1,13 @@
 package com.mystery.cenarius;
 
 import com.mystery.cenarius.domain.MemberDetails;
+import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Mystery
@@ -13,6 +17,15 @@ public class CenariusTokenEnhancer implements TokenEnhancer {
     @Override
     public OAuth2AccessToken enhance(OAuth2AccessToken oAuth2AccessToken, OAuth2Authentication oAuth2Authentication) {
         MemberDetails principal = (MemberDetails) oAuth2Authentication.getPrincipal();
-        return null;
+
+        final Map<String, Object> additionalInfo = new HashMap<>();
+        final Map<String, Object> retMap = new HashMap<>();
+
+        additionalInfo.put("memberId", principal.getUmsMember().getId());
+        additionalInfo.put("nickName", principal.getUmsMember().getNickname());
+        additionalInfo.put("integration", principal.getUmsMember().getIntegration());
+
+        ((DefaultOAuth2AccessToken)oAuth2AccessToken).setAdditionalInformation(retMap);
+        return oAuth2AccessToken;
     }
 }

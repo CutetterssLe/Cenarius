@@ -1,32 +1,23 @@
 package com.mystery.cenarius.model;
 
-import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
 
 public class CmsHelp implements Serializable {
-    @ApiModelProperty(value = "")
     private Long id;
 
-    @ApiModelProperty(value = "")
     private Long categoryId;
 
-    @ApiModelProperty(value = "")
     private String icon;
 
-    @ApiModelProperty(value = "")
     private String title;
 
-    @ApiModelProperty(value = "")
     private Integer showStatus;
 
-    @ApiModelProperty(value = "")
     private Date createTime;
 
-    @ApiModelProperty(value = "")
     private Integer readCount;
 
-    @ApiModelProperty(value = "")
     private String content;
 
     private static final long serialVersionUID = 1L;
